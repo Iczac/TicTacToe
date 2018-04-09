@@ -2,7 +2,7 @@ package com.rixig;
 
 public class Main {
     public static void main(String[] args) {
-        Board board = new Board();
+        Process board = new Process();
         board.startGame();
     }
 }

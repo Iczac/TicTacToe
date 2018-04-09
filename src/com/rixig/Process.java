@@ -3,14 +3,14 @@ package com.rixig;
 
 import java.util.*;
 
-public class Board {
+public class Process {
 
     private String[][] ColArray = new String[3][3];
     private String xTurn;
     private int wonX;
     private int wonO;
 
-    public Board(){
+    public Process(){
         this.ColArray[0][0]= "   ";
         this.ColArray[0][1]= "   ";
         this.ColArray[0][2]= "   ";
