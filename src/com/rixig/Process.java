@@ -10,6 +10,8 @@ public class Process {
     private int wonX;
     private int wonO;
 
+//    Constructor
+
     public Process(){
         this.ColArray[0][0]= "   ";
         this.ColArray[0][1]= "   ";
@@ -24,6 +26,8 @@ public class Process {
         this.wonX = 0;
     }
 
+//    Rendering Playboard
+
     public void renderBoard() {
         System.out.println("+"+"---+"+"---+"+"---+");
         System.out.println("|"+this.ColArray[0][0]+"|"+this.ColArray[0][1]+"|"+this.ColArray[0][2]+"|");
@@ -33,6 +37,9 @@ public class Process {
         System.out.println("|"+this.ColArray[2][0]+"|"+this.ColArray[2][1]+"|"+this.ColArray[2][2]+"|");
         System.out.println("+"+"---+"+"---+"+"---+");
     }
+
+
+//    Inserting values to Column
 
     public int insertCol() {
         Scanner sc = new Scanner(System.in);
@@ -68,6 +75,8 @@ public class Process {
         return 0;
     }
 
+//    Insert Value Function Caller
+
     public void callInsertCol() {
         if(this.insertCol() == 0) {
             this.renderBoard();
@@ -77,6 +86,9 @@ public class Process {
         }
     }
 
+
+//    Switching Players Turns
+
     public void switchPlayer() {
         if (this.xTurn == "X") {
             this.xTurn = "O";
@@ -85,6 +97,9 @@ public class Process {
         }
         System.out.println("It's player " + xTurn + " turn.");
     }
+
+
+//    Load The Game
 
     public void initializeGame() {
         System.out.println("Welcome to Jic-Jac-Joe\n");
@@ -97,6 +112,8 @@ public class Process {
             this.xTurn = "O";
         }
     }
+
+//    Winning Condition Checker
 
     public int winConditionChecker() {
         for (int i = 0; i < this.ColArray.length; i++) {
@@ -146,6 +163,8 @@ public class Process {
         return 1;
     }
 
+//    Reset The Game
+
     public void reset() {
         this.ColArray[0][0]= "   ";
         this.ColArray[0][1]= "   ";
@@ -157,6 +176,8 @@ public class Process {
         this.ColArray[2][1]= "   ";
         this.ColArray[2][2]= "   ";
     }
+
+//    Replay Function
 
     public int playAgain() {
         Scanner sc = new Scanner(System.in);
@@ -180,6 +201,8 @@ public class Process {
         }
         return 0;
     }
+
+//    Start A Game
 
     public void startGame() {
         boolean play = true;
@@ -210,7 +233,7 @@ public class Process {
     }
 
 
-//    Special Function to test the Winning Cases
+//    Special Function to Test the Winning Cases
 
     public void testWinCoditions() {
         System.out.println("H2 Winning Case\n");
